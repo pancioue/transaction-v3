@@ -52,7 +52,7 @@ moveSupplierImportingProductsForRebuilding rebuild時 `product_categories`  會�
 
 題外話，
 * Laravel 的 insertGetId 並非事務，雖然機率很小，但有可能取到的並不是正確的id
-若沒要取得id，用insert就好，可以少進出DB一次
+若沒要取得id，用insert就好，可以少進出DB一次 (X) => insertGetId是使用mysql的新功能，類似session，快速又安全，建議使用 
 * insertBatch 是使用 insert ignore into , 只要其中有一個成功就會回傳1
 	insert ignore into 與 insert into鎖的機制相同
 
